@@ -14,7 +14,7 @@ class Home: UIViewController {
     @IBOutlet weak var Map: MKMapView!
     
     let locationManager = CLLocationManager()
-    let regionInMeters: Double = 10000
+    let regionInMeters: Double = 2000
     
         override func viewDidLoad() {
             super.viewDidLoad()
