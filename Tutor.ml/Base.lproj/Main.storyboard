@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tutor_ml" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OPN-yb-LsG">
-                                <rect key="frame" x="107" y="431" width="200" height="34"/>
+                                <rect key="frame" x="107" y="351" width="200" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="sz3-HT-lmf"/>
                                 </constraints>
@@ -31,7 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w8z-AK-CzH">
-                                <rect key="frame" x="107" y="495" width="200" height="34"/>
+                                <rect key="frame" x="107" y="415" width="200" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="ysJ-yw-qWN"/>
                                 </constraints>
@@ -39,7 +40,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIF-WO-1l3">
-                                <rect key="frame" x="177" y="554" width="60" height="30"/>
+                                <rect key="frame" x="177" y="474" width="60" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="yzN-qo-Aep"/>
                                 </constraints>
@@ -75,57 +76,55 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="6ke-rp-x7R" customClass="Home" customModule="Tutor_ml" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OVb-GT-fjz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ENo-yT-rcA">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <subviews>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VPt-77-ymL">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="721"/>
-                                    </mapView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Duf-jh-vi3">
-                                        <rect key="frame" x="0.0" y="721" width="414" height="175"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jO4-m0-0Jr">
-                                                <rect key="frame" x="186" y="77.5" width="42" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstItem="jO4-m0-0Jr" firstAttribute="centerY" secondItem="Duf-jh-vi3" secondAttribute="centerY" id="Cjy-Fe-0LX"/>
-                                            <constraint firstItem="jO4-m0-0Jr" firstAttribute="centerX" secondItem="Duf-jh-vi3" secondAttribute="centerX" id="fm2-iy-64C"/>
-                                            <constraint firstItem="jO4-m0-0Jr" firstAttribute="centerX" secondItem="Duf-jh-vi3" secondAttribute="centerX" id="vS9-hy-8d4"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
-                                <constraints>
-                                    <constraint firstItem="VPt-77-ymL" firstAttribute="leading" secondItem="ENo-yT-rcA" secondAttribute="leading" id="EFb-io-D6f"/>
-                                    <constraint firstAttribute="trailing" secondItem="VPt-77-ymL" secondAttribute="trailing" id="Yl9-tM-n69"/>
-                                    <constraint firstItem="Duf-jh-vi3" firstAttribute="top" secondItem="VPt-77-ymL" secondAttribute="bottom" id="bxs-xw-e4P"/>
-                                </constraints>
-                            </stackView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Tsj-Su-otb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <gestureRecognizers/>
+                            </mapView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1lw-YW-QnJ">
+                                <rect key="frame" x="0.0" y="600" width="414" height="136"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wOO-QQ-Rz5">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="096-0d-hcY">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="o8q-e8-ef1">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ENo-yT-rcA" firstAttribute="top" secondItem="OVb-GT-fjz" secondAttribute="top" id="KxW-E0-Sr4"/>
-                            <constraint firstAttribute="bottom" secondItem="ENo-yT-rcA" secondAttribute="bottom" id="NkL-lh-Jah"/>
-                            <constraint firstAttribute="trailing" secondItem="ENo-yT-rcA" secondAttribute="trailing" id="RMf-yc-wSe"/>
-                            <constraint firstItem="ENo-yT-rcA" firstAttribute="leading" secondItem="OVb-GT-fjz" secondAttribute="leading" id="xgi-XC-kkX"/>
+                            <constraint firstItem="QEZ-sY-9k2" firstAttribute="trailing" secondItem="1lw-YW-QnJ" secondAttribute="trailing" id="5dQ-nN-9EV"/>
+                            <constraint firstItem="Tsj-Su-otb" firstAttribute="top" secondItem="OVb-GT-fjz" secondAttribute="top" id="WE3-Vr-Exe"/>
+                            <constraint firstAttribute="bottom" secondItem="Tsj-Su-otb" secondAttribute="bottom" id="cjP-BU-O3t"/>
+                            <constraint firstItem="QEZ-sY-9k2" firstAttribute="bottom" secondItem="1lw-YW-QnJ" secondAttribute="bottom" id="fFR-Uo-h1a"/>
+                            <constraint firstItem="1lw-YW-QnJ" firstAttribute="top" secondItem="QEZ-sY-9k2" secondAttribute="top" constant="600" id="fMo-Nh-Xxq"/>
+                            <constraint firstItem="Tsj-Su-otb" firstAttribute="leading" secondItem="OVb-GT-fjz" secondAttribute="leading" id="gXZ-13-2ty"/>
+                            <constraint firstAttribute="trailing" secondItem="Tsj-Su-otb" secondAttribute="trailing" id="gaN-PM-VNK"/>
+                            <constraint firstItem="1lw-YW-QnJ" firstAttribute="leading" secondItem="QEZ-sY-9k2" secondAttribute="leading" id="kPJ-r8-SZC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QEZ-sY-9k2"/>
                     </view>
                     <connections>
-                        <outlet property="Map" destination="VPt-77-ymL" id="VfZ-8U-8KL"/>
+                        <outlet property="Map" destination="Tsj-Su-otb" id="3lu-eF-dBI"/>
+                        <outlet property="collectionView" destination="1lw-YW-QnJ" id="IRq-72-Yfb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rha-DB-CDS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1002.8985507246377" y="118.52678571428571"/>
+            <point key="canvasLocation" x="1002.8985507246377" y="118.20652173913044"/>
         </scene>
     </scenes>
 </document>
