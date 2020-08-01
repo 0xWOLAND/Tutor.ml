@@ -45,6 +45,8 @@
 	<string>Main</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We&apos;ll use this to find tutors near you</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>We&apos;ll use this to find tutors near you</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
