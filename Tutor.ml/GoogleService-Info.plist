@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>535067448526-2eci7r9lr6lovt21ohfdc5inhl77v3ii.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.535067448526-2eci7r9lr6lovt21ohfdc5inhl77v3ii</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAlLw2pvhgI1dy09WD4oNedwOhz0U4CkiM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>535067448526</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.bhargavannem.Tutor-ml</string>
+	<key>PROJECT_ID</key>
+	<string>tutorml</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tutorml.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:535067448526:ios:4e3d786359977d4921ac9f</string>
+	<key>DATABASE_URL</key>
+	<string>https://tutorml.firebaseio.com</string>
+</dict>
+</plist>
