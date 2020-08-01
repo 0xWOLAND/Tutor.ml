@@ -8,7 +8,10 @@ target 'Tutor.ml' do
   # Pods for Tutor.ml
 	# add the Firebase pod for Google Analytics
 	pod 'Firebase/Analytics'
+	pod 'FirebaseUI'
 	pod 'Firebase/Core'
+	pod 'Firebase/Firestore'
+	pod 'FirebaseFirestoreSwift'
 	pod 'Firebase/Database'
 	# add pods for any other desired Firebase products
 	# https://firebase.google.com/docs/ios/setup#available-pods

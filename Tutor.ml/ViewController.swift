@@ -7,17 +7,30 @@
 //
 
 import UIKit
-
+import Firebase
+import FirebaseFirestore
 class ViewController: UIViewController {
     @IBOutlet weak var UsernameOutlet: UITextField!
     
     @IBOutlet weak var PasswordOutlet: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
 
     @IBAction func btnClicked(_ sender: Any) {
+        let db = Firestore.firestore()
+        db.collection("Login").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+//                    print("\(document.documentID) => \(document.data())")
+                    let data = document.data()
+                }
+            }
+        }
         
     }
     
