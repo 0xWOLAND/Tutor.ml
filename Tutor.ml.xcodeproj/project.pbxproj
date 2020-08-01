@@ -16,6 +16,7 @@
 		F60E540224D4ED4C005D1445 /* Pods_Tutor_ml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C72D19BBFA458E533FE95D75 /* Pods_Tutor_ml.framework */; };
 		F60E540324D4ED4C005D1445 /* Pods_Tutor_ml.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C72D19BBFA458E533FE95D75 /* Pods_Tutor_ml.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F64355A124D4EEF10027FDAE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F64355A024D4EEF10027FDAE /* GoogleService-Info.plist */; };
+		F6B6B00E24D507B9002EA09D /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B6B00D24D507B9002EA09D /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +45,7 @@
 		F60E53F824D4E56A005D1445 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F60E53FA24D4E56A005D1445 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F64355A024D4EEF10027FDAE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F6B6B00D24D507B9002EA09D /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		FDE448A59A967FF31E2B559F /* Pods-Tutor.ml.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tutor.ml.debug.xcconfig"; path = "Target Support Files/Pods-Tutor.ml/Pods-Tutor.ml.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +103,7 @@
 				F60E53EE24D4E568005D1445 /* SceneDelegate.swift */,
 				F60E53F024D4E568005D1445 /* ViewController.swift */,
 				F60E53F224D4E568005D1445 /* Main.storyboard */,
+				F6B6B00D24D507B9002EA09D /* Home.swift */,
 				F60E53F524D4E56A005D1445 /* Assets.xcassets */,
 				F60E53F724D4E56A005D1445 /* LaunchScreen.storyboard */,
 				F60E53FA24D4E56A005D1445 /* Info.plist */,
@@ -246,6 +249,7 @@
 			files = (
 				F60E53F124D4E568005D1445 /* ViewController.swift in Sources */,
 				F60E53ED24D4E568005D1445 /* AppDelegate.swift in Sources */,
+				F6B6B00E24D507B9002EA09D /* Home.swift in Sources */,
 				F60E53EF24D4E568005D1445 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

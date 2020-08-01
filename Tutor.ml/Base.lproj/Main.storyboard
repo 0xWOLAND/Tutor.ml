@@ -70,20 +70,38 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="E3G-7g-NtH">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="6ke-rp-x7R" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="6ke-rp-x7R" customClass="Home" customModule="Tutor_ml" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OVb-GT-fjz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VPt-77-ymL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="479"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Duf-jh-vi3">
+                                <rect key="frame" x="0.0" y="487" width="414" height="409"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Duf-jh-vi3" firstAttribute="top" secondItem="VPt-77-ymL" secondAttribute="bottom" id="S2Z-1k-Ff9"/>
+                            <constraint firstAttribute="trailing" secondItem="VPt-77-ymL" secondAttribute="trailing" id="Sqi-ri-8wi"/>
+                            <constraint firstItem="VPt-77-ymL" firstAttribute="leading" secondItem="OVb-GT-fjz" secondAttribute="leading" id="jr1-xR-ca6"/>
+                            <constraint firstItem="VPt-77-ymL" firstAttribute="top" secondItem="OVb-GT-fjz" secondAttribute="top" id="yo2-y4-9cD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="QEZ-sY-9k2"/>
                     </view>
+                    <connections>
+                        <outlet property="Map" destination="VPt-77-ymL" id="VfZ-8U-8KL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rha-DB-CDS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1003" y="119"/>
+            <point key="canvasLocation" x="1002.8985507246377" y="118.52678571428571"/>
         </scene>
     </scenes>
 </document>
