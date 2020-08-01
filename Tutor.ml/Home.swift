@@ -8,32 +8,45 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class Home: UIViewController {
     @IBOutlet weak var Map: MKMapView!
-    
-    let manager = CLLocationManager()
+    fileprivate let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
-//        let initialLocation = CLLocation(latitude: <#T##CLLocationDegrees#>, longitude: <#T##CLLocationDegrees#>)
         super.viewDidLoad()
-        manager.requestLocation()
-
-        // Do any additional setup after loading the view.
+        setUpMapView()
     }
     
-    
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setUpMapView(){
+        Map.showsUserLocation = true
+        Map.showsCompass = true
+        Map.showsBuildings = true
+        Map.showsScale = true
+        currentLocation()
     }
-    */
+    
+    func currentLocation() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        if #available(iOS 11.0, *) {
+            locationManager.showsBackgroundLocationIndicator = true
+        }
+        else{}
+        locationManager.startUpdatingLocation()
+    }
+}
 
+extension Home: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations.last! as CLLocation
+        let currentLocation = location.coordinate
+        let coordinateRegion = MKCoordinateRegion(center: currentLocation, latitudinalMeters: 800, longitudinalMeters: 800)
+        Map.setRegion(coordinateRegion, animated: true)
+        locationManager.stopUpdatingLocation()
+    }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error.localizedDescription)
+    }
 }

@@ -78,20 +78,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VPt-77-ymL">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="479"/>
-                            </mapView>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Duf-jh-vi3">
-                                <rect key="frame" x="0.0" y="487" width="414" height="409"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ENo-yT-rcA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VPt-77-ymL">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                                    </mapView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Duf-jh-vi3">
+                                        <rect key="frame" x="0.0" y="448" width="414" height="448"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jO4-m0-0Jr">
+                                                <rect key="frame" x="186" y="214" width="42" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="jO4-m0-0Jr" firstAttribute="centerY" secondItem="Duf-jh-vi3" secondAttribute="centerY" id="8Rd-jF-2lm"/>
+                                            <constraint firstItem="jO4-m0-0Jr" firstAttribute="centerX" secondItem="Duf-jh-vi3" secondAttribute="centerX" id="vS9-hy-8d4"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Duf-jh-vi3" firstAttribute="top" secondItem="VPt-77-ymL" secondAttribute="bottom" id="S2Z-1k-Ff9"/>
-                            <constraint firstAttribute="trailing" secondItem="VPt-77-ymL" secondAttribute="trailing" id="Sqi-ri-8wi"/>
-                            <constraint firstItem="VPt-77-ymL" firstAttribute="leading" secondItem="OVb-GT-fjz" secondAttribute="leading" id="jr1-xR-ca6"/>
-                            <constraint firstItem="VPt-77-ymL" firstAttribute="top" secondItem="OVb-GT-fjz" secondAttribute="top" id="yo2-y4-9cD"/>
+                            <constraint firstAttribute="trailing" secondItem="ENo-yT-rcA" secondAttribute="trailing" id="SVs-He-Jim"/>
+                            <constraint firstItem="ENo-yT-rcA" firstAttribute="top" secondItem="OVb-GT-fjz" secondAttribute="top" id="kOy-Xl-myi"/>
+                            <constraint firstItem="ENo-yT-rcA" firstAttribute="leading" secondItem="OVb-GT-fjz" secondAttribute="leading" id="kdd-Cc-GPn"/>
+                            <constraint firstAttribute="bottom" secondItem="ENo-yT-rcA" secondAttribute="bottom" id="x6u-uE-X7E"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QEZ-sY-9k2"/>
                     </view>
