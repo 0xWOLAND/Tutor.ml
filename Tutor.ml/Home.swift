@@ -97,16 +97,30 @@ extension Home: CLLocationManagerDelegate {
 
 extension Home: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath)
-        cell.backgroundColor = UIColor.red
+        cell.backgroundColor = UIColor.white
+        cell.layer.cornerRadius = 10
+        print("yo")
+        print(cell.frame.width)
+        print(cell.frame.height)
+        
+        cell.frame.size.width = 100
+        cell.frame.size.height = 100
+        
+        print(cell.frame.width)
+        print(cell.frame.height)
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Square pressed lmao")
     }
+    
+    
+    
 }
